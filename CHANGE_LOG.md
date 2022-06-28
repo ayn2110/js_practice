@@ -1,3 +1,9 @@
+# 0.0.2(20220628)
+## 02_variable.html
+變數與條件判斷
+
+
+
 # 0.0.1(20220627)
 ## 01_menu_switch.html
 -新增01_menu_switch.html的頁面
