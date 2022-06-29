@@ -7,7 +7,7 @@
     <style>
         .container{
             margin: auto;
-            width: 80%;
+            width: 95%;
             max-width: 1140px;
         }
         .img-fluid{
@@ -54,6 +54,8 @@
         $('.thumbnails>img').on('click', function(e){
             // 主圖src屬性(attribute) 替換成 當前點擊縮圖的src
             $('.main-img>img').attr('src', $(this).attr('src'))
+            $(this).addClass('active')
+            $(this).siblings().removeClass('active')
 
         }) // .thumbnails>img end
 
