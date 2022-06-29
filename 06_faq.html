@@ -17,6 +17,12 @@
             padding:10px 8px;
             cursor: pointer;
         }
+        .question-content.active .answer{
+            display: block;
+        }
+        .question-content.active .icon-arrow{
+            transform: rotate(180deg);
+        }
         .answer{
             display: none;
         }
@@ -24,6 +30,7 @@
             position: relative;
         }
         .icon-arrow{
+            transition: transform .3s;
             position: absolute;
             width: 30px;
             line-height: 30px;
@@ -32,6 +39,8 @@
             right:-5px;
             top:-5px;
         }
+
+
     </style>
 </head>
 <body>
