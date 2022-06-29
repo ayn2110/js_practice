@@ -27,6 +27,7 @@
         .tab-content.active{
             display: block;
         }
+
     </style>
 </head>
 <body>
@@ -43,6 +44,17 @@
 
     <!-- jquery主程式 -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        $('.tab-link>a').on('click', function(){
+            $(this).addClass('active')
+            $(this).siblings().removeClass('active')
+            console.log($(this).attr('href'))
+            $( $(this).attr('href') ).addClass('active')
+            $( $(this).attr('href') ).siblings().removeClass('active')
+        })//.tab-link>a end
+
+    </script>
 
 </body>
 </html>
