@@ -27,26 +27,117 @@
         .tab-content.active{
             display: block;
         }
-
+        .img-fluid{
+            width: 100%;
+        }
+        .container{
+            width: 95%;
+            max-width: 1140px;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- .tab-link>a[href="#tab$"]*3 -->
     <div class="tab-link">
         <a href="#tab1" class="active">商品資訊</a>
         <a href="#tab2">出價紀錄</a>
         <a href="#tab3">問與答</a>
     </div>
-
-    <div id="tab1" class="tab-content active">內容1</div>
-    <div id="tab2" class="tab-content">內容2</div>
-    <div id="tab3" class="tab-content">內容3</div>
-
+    <div class="container">
+        <div id="tab1" class="tab-content active">
+            <img src="public/images/shiitake1.jpg" class="img-fluid" alt="">
+            <p>
+                <ul>
+                    <li>菇的尺寸：L (3~4cm)</li>
+                    <li>保存期限：1年</li>
+                    <li>有效日期：詳見包裝</li>
+                    <li>保存方式：乾燥菇類怕受潮，保存室溫乾燥處，請勿放入冰箱。若開封後，建議密封袋裝保存。</li>
+                    <li>產地：臺灣</li>
+                    <li>【溫火烘焙36小時】
+                        每一朵香冬菇，經漫長溫火呵護烘焙，親手撥動翻面，直到完全乾燥，不僅延長保存時間，也將香冬菇的香味發揮得淋漓盡致。</li>
+                </ul>
+            </p>
+            </div>
+        <div id="tab2" class="tab-content">
+                <ul>
+                    <li>user01</li>
+                    <li>user02</li>
+                    <li>user03</li>
+                    <li>user04</li>
+                    <li>user05</li>
+                    <li>user06</li>
+                    <li>user07</li>
+                    <li>user08</li>
+                    <li>user09</li>
+                    <li>user10</li>
+                    <li>user11</li>
+                    <li>user12</li>
+                    <li>user13</li>
+                    <li>user14</li>
+                    <li>user15</li>
+                    <li>user16</li>
+                    <li>user17</li>
+                    <li>user18</li>
+                    <li>user19</li>
+                    <li>user20</li>
+                    <li>user21</li>
+                    <li>user22</li>
+                    <li>user23</li>
+                    <li>user24</li>
+                    <li>user25</li>
+                    <li>user26</li>
+                    <li>user27</li>
+                    <li>user28</li>
+                    <li>user29</li>
+                    <li>user30</li>
+                    <li>user31</li>
+                    <li>user32</li>
+                    <li>user33</li>
+                    <li>user34</li>
+                    <li>user35</li>
+                    <li>user36</li>
+                    <li>user37</li>
+                    <li>user38</li>
+                    <li>user39</li>
+                    <li>user40</li>
+                    <li>user41</li>
+                    <li>user42</li>
+                    <li>user43</li>
+                    <li>user44</li>
+                    <li>user45</li>
+                    <li>user46</li>
+                    <li>user47</li>
+                    <li>user48</li>
+                    <li>user49</li>
+                    <li>user50</li>
+                </ul>
+            
+        </div>
+        <div id="tab3" class="tab-content">
+            <img src="public/images/shiitake3.jpg" class="img-fluid" alt="">
+            <p>Guckoo在民國78年創立於台中新社。
+                受到自然的恩賜,不使用任何化學肥料,無農藥生產的乾香菇,美味、香氣飽滿、口感扎實、富含營養成分,也是我們在餐桌上必不可少的重要食材。
+                現代社會的飲食生活便利性重視飲食轉變,而且方便的時代,Guckoo也不斷調整傳統的段木香菇的製程，想將段木香菇的優點傳達給大家。</p>
+        
+        </div>
+    </div>
     <!-- jquery主程式 -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <script>
-        $('.tab-link>a').on('click', function(){
+        $('.tab-link>a').on('click', function(e){
+            e.preventDefault()
             $(this).addClass('active')
             $(this).siblings().removeClass('active')
             console.log($(this).attr('href'))
