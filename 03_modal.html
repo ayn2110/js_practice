@@ -33,6 +33,9 @@
         }
         .btn-close{
             position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: blue;
             right:15px;
             top:15px;
             cursor: pointer;
@@ -50,6 +53,8 @@
             <br>
             <br>
             <br>
+            <a href="#">login</a>
+            <a href="#">register</a>
         </div>
     </div>
     <p>01</p>
@@ -117,53 +122,27 @@
     <p>63</p>
     <p>64</p>
     <p>65</p>
-    <p>66</p>
-    <p>67</p>
-    <p>68</p>
-    <p>69</p>
-    <p>70</p>
-    <p>71</p>
-    <p>72</p>
-    <p>73</p>
-    <p>74</p>
-    <p>75</p>
-    <p>76</p>
-    <p>77</p>
-    <p>78</p>
-    <p>79</p>
-    <p>80</p>
-    <p>81</p>
-    <p>82</p>
-    <p>83</p>
-    <p>84</p>
-    <p>85</p>
-    <p>86</p>
-    <p>87</p>
-    <p>88</p>
-    <p>89</p>
-    <p>90</p>
-    <p>91</p>
-    <p>92</p>
-    <p>93</p>
-    <p>94</p>
-    <p>95</p>
-    <p>96</p>
-    <p>97</p>
-    <p>98</p>
-    <p>99</p>
-    <p>100</p>
+
 
     <script>
         let modalWrapper   = document.getElementsByClassName('modal-wrapper')[0]
         let btnCloseSwitch = document.getElementById('btn-close-switch')
         btnCloseSwitch.addEventListener('click', closeModal)
+        modalWrapper.addEventListener('click', closeModal)
 
         function openModal(){
             modalWrapper.classList.add('active')
         } // openModal end
 
-        function closeModal(){
-            modalWrapper.classList.remove('active')
+        function closeModal(e){
+            // console.log(e.target)
+            // console.log(this)
+            if (e.target == this){
+                console.log('符合事件的選取器')
+                modalWrapper.classList.remove('active')
+            }else{
+                console.log('不符合')
+            }
         } //closeModal end
         
     </script>
