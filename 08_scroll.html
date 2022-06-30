@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #sidebar{
+            background-color: orange;
+            width: 300px;
+        }
+        #sidebar>ul{
+
+            list-style-type: none;
+        }
+        #sidebar.active{
+            position: fixed;
+            top:10px;
+            left:10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div style="padding-bottom:50%;background:lightsteelblue">
+    </div>
+    <div id="content" style="height:2000px;">
+        <div id="sidebar">
+            <ul>
+                <li>01</li>
+                <li>02</li>
+                <li>03</li>
+                <li>04</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- jquery主程式 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        // 直接執行
+        let contentTop = $('#content').offset().top
+
+
+        // 視窗寬度有變化執行
+        $(window).resize(function(){
+            // 假如 視窗的捲軸高度 >= 碰到要固定區塊的""""父層""""的與視窗位移距離
+            if( $(window).scrollTop() >= contentTop){
+                // 將固定區塊套用addClass
+                $('#sidebar').addClass('active')
+            }
+        })//window end
+
+        // 視窗捲軸有捲動執行
+        $(window).scroll(function(){
+            // 假如 視窗的捲軸高度 >= 父層的與視窗位移距離
+            if( $(window).scrollTop() >= contentTop){
+                    $('#sidebar').addClass('active')
+            }else{
+                $('#sidebar').removeClass('active')
+            }//if end
+        })//scroll end
+    </script>
+</body>
+</html>

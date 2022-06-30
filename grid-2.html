@@ -19,14 +19,14 @@
                 margin: auto;
                 max-width: 900px;
                 display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                grid-template-rows: repeat(5, 100px);
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: repeat(4, 4em);
                 grid-template-areas: 
-                "r y y y y"
-                "r y y y y"
-                "c c o g g"
-                "c c . g g"
-                "c c b b b"
+                "r g y b b b"
+                "r g d b b b"
+                "o o d c a a"
+                "o o d c a a"
+            
                 ;
                 gap:10px;
             }
@@ -42,20 +42,20 @@
             background-color: orange;
             grid-area: o;
             background-image: url('public/images/shiitake2.jpg');
-            background-size: 100%;
+            background-size: auto 100%;
 
         }
         .box3{
             background-color: yellow;
             grid-area: y;
             background-image: url('public/images/shiitake3.jpg');
-            background-size: 100%;
+            background-size: auto 100%;
         }
         .box4{
             background-color: green;
             grid-area: g;
             background-image: url('public/images/shiitake4.jpg');
-            background-size: 100%;
+            background-size: auto 100%;
         }
         .box5{
             background-color: blue;
@@ -67,8 +67,13 @@
         }
         .box7{
             background-color: pink;
+            grid-area: a;
+            
         }
-
+        .box8{
+            background-color: tomato;
+            grid-area: d;
+        }
     </style>
 </head>
 <body>
@@ -80,6 +85,7 @@
         <div class="box box5">05</div>
         <div class="box box6">06</div>
         <div class="box box7"></div>
+        <div class="box box8"></div>
     </div>
 </body>
 </html>
