@@ -17,14 +17,19 @@
             padding:10px 40px 10px 10px;
             cursor: pointer;
         }
-        .question-content.active .answer{
+        /* .question-content.active .answer{
             display: block;
-        }
+            opacity: 1;
+            height: auto;
+             transition: all 10s;
+        } */
         .question-content.active .icon-arrow{
             transform: rotate(180deg);
         }
         .answer{
             display: none;
+            /* opacity: 0; */
+            /* height: 0; */
         }
         .question{
             position: relative;
@@ -109,6 +114,7 @@
 
     <script>
         $('.question-content').on('click', function(){
+            $(this).find('.answer').stop().slideToggle()
             $(this).toggleClass('active')
             $(this).siblings().removeClass('active')
 
