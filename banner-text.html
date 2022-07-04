@@ -56,6 +56,28 @@
             height: 24px;
             background-size: 100%;
         }
+        h1{
+
+            text-align: center;
+        }
+        h1>span{
+            position: relative;
+        }
+        h1>span::after{
+            content:'';
+            position: absolute;
+            display: block;
+            top:0px;
+            /* bottom:0; */
+            left:50%;
+            width: 200px;
+            transform: translateX(-50%) translateY(140%);
+            padding-bottom: 20%;
+            /* background-color: red; */
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url('public/images/home-line-title.svg');
+        }
     </style>
 </head>
 <body>
@@ -85,9 +107,12 @@
         </div>
     </div>
     <br>
+    <h1><span>關於我們</span></h1>
     <br>
     <br>
     <br>
+    <h1><span>選擇我們的原因</span></h1>
+
     <br>
     <br>
     <br>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            background-color: lightgreen;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .left-box{ 
+            width: 50%;
+            background-color: pink;
+        }
+        .right-box{
+            width: 50%;
+            background-color: lightblue;
+        }
+        @media (max-width:767px){
+            .left-box{
+                width: 100%;
+            }
+            .right-box{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box display-md-none">
+        <div class="left">左</div>
+        <div class="right">右</div>
+    </div>
+    <div class="row">
+        <div class="left-box">左</div>
+        <div class="right-box">右</div>
+    </div>
+    <div class="row">
+        <div class="left-box">左</div>
+        <div class="right-box order-md-1" style="border:1px solid black">
+            <div class="row">
+                <div class="left-box">內左</div>
+                <div class="right-box">內右</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
