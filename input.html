@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        input{
+            width: 100%;
+        }
+        .container{
+            width: 90%;
+            max-width: 1140px;
+            margin: auto;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .left{
+            width: 18%;
+            margin-right: 2%;
+            text-align: right;
+        }
+        .right{
+            width: 80%;
+        }
+        .input-group{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        @media (max-width:767px){
+            .left{
+                width: 100%;
+                text-align: left;
+            }
+            .right{
+                width: 100%;
+            }
+
+        }
+        .btn-primary{
+            background-color: lightblue;
+        }
+        input[type="submit"]{
+            cursor: pointer;
+            border:none;
+            padding:10px;
+            border-radius: 4px;
+            width: 100%;
+        }
+        form{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <form action="dashboard.html" method="POST">
+                <div class="input-group">
+                    <div class="left">
+                        <label for="account">帳號</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" id="account" name="account">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="left">
+                        <label for="password">密碼</label>
+                    </div>
+                    <div class="right">
+                        <input type="password" id="password" name="password">
+                    </div>
+                </div>
+                <input type="submit" class="btn-primary" value="登入">
+            </form>
+        </div>
+    </div>
+   
+    
+</body>
+</html>
